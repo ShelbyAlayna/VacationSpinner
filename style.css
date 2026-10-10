@@ -48,7 +48,7 @@ body {
 .c1 { width: 160px; height: 40px; top: 9%; left: -4%; }
 .c2 { width: 120px; height: 32px; top: 22%; right: 4%; }
 .c3 { width: 200px; height: 46px; bottom: 12%; left: 6%; }
- 
+
 main {
   position: relative; z-index: 1;
   max-width: 960px; margin: 0 auto; padding: 8px 20px 48px;
@@ -65,10 +65,10 @@ h1 {
   text-shadow: 3px 3px 0 var(--peach);
 }
 header p { margin: 8px auto 0; max-width: 34ch; color: var(--ink-soft); font-weight: 600; font-size: 1.05rem; }
- 
+
 .stage { display: grid; gap: 28px; align-items: start; }
 @media (min-width: 820px) { .stage { grid-template-columns: 1.15fr .85fr; } }
- 
+
 .wheel-wrap { display: grid; justify-items: center; gap: 22px; }
 .wheel-box { position: relative; width: min(92vw, 440px); aspect-ratio: 1; }
 .wheel-box::before {
@@ -94,7 +94,7 @@ canvas { position: relative; width: 100%; height: 100%; display: block; border-r
   display: grid; place-items: center; font-size: clamp(28px, 7vw, 40px);
   box-shadow: 0 4px 12px rgba(31,58,95,.2);
 }
- 
+
 .spin-btn {
   font: 700 1.25rem/1 "Quicksand", system-ui, sans-serif;
   color: #1F3A5F; background: var(--sun);
@@ -106,7 +106,7 @@ canvas { position: relative; width: 100%; height: 100%; display: block; border-r
 .spin-btn:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 1px 0 #1F3A5F; }
 .spin-btn:disabled { opacity: .6; cursor: wait; }
 button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
- 
+
 /* destination list as a luggage tag */
 .tag {
   background: var(--card); border: 2px dashed var(--line);
@@ -143,7 +143,7 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outl
 .chips button:hover { background: var(--line); }
 .msg { min-height: 1.3em; margin: 10px 0 0; color: #C0567A; font-weight: 700; font-size: .9rem; }
 .reset { margin-top: 12px; background: none; border: none; color: var(--ink-soft); text-decoration: underline; padding: 4px 0; }
- 
+
 /* boarding pass result */
 .overlay {
   position: fixed; inset: 0; z-index: 10; display: none; place-items: center; padding: 20px;
@@ -187,15 +187,15 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outl
   .stub { width: 92px; padding: 16px 10px; }
   .meta { grid-template-columns: 1fr 1fr; }
 }
- 
+
 .confetti { position: fixed; top: -20px; z-index: 11; pointer-events: none; font-size: 22px; animation: fall linear forwards; }
 @keyframes fall { to { transform: translateY(110vh) rotate(540deg); } }
- 
+
 @media (prefers-reduced-motion: reduce) {
   .pass, .confetti, .pointer.wiggle { animation: none; }
   .confetti { display: none; }
 }
- 
+
 .plane {
   position: fixed;
   top: 12%;
@@ -224,7 +224,7 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outl
 @media (prefers-reduced-motion: reduce) {
   .plane { animation: none; left: 6%; }
 }
- 
+
 .clouds, .plane { display: none; }
 .wheel-wrap { margin-top: 40px; }
- 
+.tag { margin-top: 80px; }
