@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Where are we going? ✈️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="clouds" aria-hidden="true"><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div></div>
+<div class="plane" aria-hidden="true"><span class="trail"></span><span class="jet">✈️</span></div>
+<main>
+  <header>
+    <h1>Where are We Going?</h1>
+    <p>Add your dream spots, spin the wheel, and let fate book the trip.</p>
+  </header>
+
+  <section class="stage">
+    <div class="wheel-wrap">
+      <div class="wheel-box">
+        <div class="pointer" id="pointer" aria-hidden="true">📍</div>
+        <canvas id="wheel" aria-label="Vacation destination wheel" role="img"></canvas>
+        <div class="hub" aria-hidden="true">🌍</div>
+      </div>
+      <button class="spin-btn" id="spinBtn">Spin the wheel</button>
+    </div>
+
+    <div class="tag">
+      <h2>Trip ideas</h2>
+      <p class="hint">Everyone gets a pick. Add up to 16.</p>
+      <form class="add-row" id="addForm" onsubmit="return false;">
+        <input id="placeInput" type="text" maxlength="28" placeholder="e.g. Tulum, Mexico" aria-label="Add a destination">
+        <button type="submit" id="addBtn">Add</button>
+      </form>
+      <p class="msg" id="msg" role="status"></p>
+      <ul class="chips" id="chips"></ul>
+      <button class="reset" id="resetBtn">Reset to starter list</button>
+    </div>
+  </section>
+</main>
+
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="destName">
+  <div class="pass">
+    <div class="pass-main">
+      <div class="pass-top"><span>Boarding pass</span><span id="flightNo">VW 214</span></div>
+      <div class="pass-body">
+        <p class="small">You're going to</p>
+        <p class="dest" id="destName">Tulum</p>
+        <div class="route"><span>DTW</span><div class="lineish"><span>✈️</span></div><span id="destCode">TUL</span></div>
+        <div class="meta">
+          <div><p class="small">Passengers</p><b>The crew</b></div>
+          <div><p class="small">Gate</p><b id="gate">B7</b></div>
+          <div><p class="small">Seat</p><b id="seat">14A</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="stub">
+      <span class="emoji" id="stubEmoji">🌴</span>
+      <div class="barcode" aria-hidden="true"></div>
+    </div>
+    <div class="pass-actions">
+      <button class="again" id="againBtn">Spin again</button>
+      <button class="remove" id="removeBtn">Remove it &amp; spin</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
