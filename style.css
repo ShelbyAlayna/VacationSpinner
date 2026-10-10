@@ -1,6 +1,6 @@
 :root {
   --sky: #8FD0F5;
---sky-deep: #4BA3E3;
+  --sky-deep: #4BA3E3;
   --sand: #FFF6E3;
   --peach: #FFB38A;
   --pink: #F6A6BA;
@@ -32,8 +32,7 @@ body {
   min-height: 100vh;
   font-family: "Quicksand", "Nunito", "Segoe UI", system-ui, sans-serif;
   color: var(--ink);
-  background: linear-gradient(180deg, var(--sky) 0%, var(--sky-deep) 100%);
-  background-attachment: fixed;
+  background: #FF8FB0 url("VacationSpinnerimage.png") center / cover no-repeat fixed;
   overflow-x: hidden;
 }
 .clouds { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
@@ -52,7 +51,7 @@ body {
 
 main {
   position: relative; z-index: 1;
-  max-width: 960px; margin: 0 auto; padding: 28px 20px 48px;
+max-width: 960px; margin: 0 auto; padding: 8px 20px 48px;
   display: grid; gap: 28px;
 }
 header { text-align: center; }
@@ -73,9 +72,12 @@ header p { margin: 8px auto 0; max-width: 34ch; color: var(--ink-soft); font-wei
 .wheel-wrap { display: grid; justify-items: center; gap: 22px; }
 .wheel-box { position: relative; width: min(92vw, 440px); aspect-ratio: 1; }
 .wheel-box::before {
-  content: ""; position: absolute; inset: -14px; border-radius: 50%;
-  background: repeating-conic-gradient(var(--card) 0 6deg, var(--pink) 6deg 12deg);
-  box-shadow: 0 14px 30px rgba(31,58,95,.18);
+  content: "";
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  background: #FBF6EC;
+  box-shadow: 0 14px 30px rgba(31, 58, 95, 0.18), inset 0 0 0 2px #E2D3B8;
 }
 canvas { position: relative; width: 100%; height: 100%; display: block; border-radius: 50%; }
 .pointer {
@@ -88,7 +90,7 @@ canvas { position: relative; width: 100%; height: 100%; display: block; border-r
 .hub {
   position: absolute; inset: 50% auto auto 50%; transform: translate(-50%, -50%);
   width: 22%; aspect-ratio: 1; border-radius: 50%;
-  background: var(--card); border: 5px solid var(--sun);
+  background: var(--card); border: 5px solid #E2D3B8;
   display: grid; place-items: center; font-size: clamp(28px, 7vw, 40px);
   box-shadow: 0 4px 12px rgba(31,58,95,.2);
 }
@@ -193,6 +195,7 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outl
   .pass, .confetti, .pointer.wiggle { animation: none; }
   .confetti { display: none; }
 }
+
 .plane {
   position: fixed;
   top: 12%;
@@ -221,3 +224,5 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outl
 @media (prefers-reduced-motion: reduce) {
   .plane { animation: none; left: 6%; }
 }
+
+.clouds, .plane { display: none; }

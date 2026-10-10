@@ -1,6 +1,6 @@
 (function () {
   const STARTERS = ["New York", "Arizona", "Colorado", "Utah", "Joshua Tree", "Washington"];
-  const COLORS = ["#FFB38A", "#9FD3E8", "#F6A6BA", "#6BB89A", "#FFD37A", "#B9A7E8"];
+  const COLORS = ["#9CAF88", "#E6D3B3", "#C9876A", "#9DB8C9", "#8A9A6E", "#D4A59A"];
   const EMOJIS = ["🏜️", "🌵", "🏔️", "🗽", "🌲", "⛰️", "🏕️", "🚗", "🌄", "🎒"];
   const STORE_KEY = "vacation-wheel-places";
 
