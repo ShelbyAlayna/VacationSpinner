@@ -227,4 +227,4 @@ button:focus-visible, input:focus-visible { outline: 3px solid var(--pink); outl
 
 .clouds, .plane { display: none; }
 .wheel-wrap { margin-top: 40px; }
-.tag { margin-top: 80px; }
+.tag { margin-top: 150px; }
